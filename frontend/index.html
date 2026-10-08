@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Turn a story into a clear, structured summary."
+    />
+    <title>Story Summarizer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">A little clarity for every story</p>
+        <h1>Story Summarizer</h1>
+        <p class="description">
+          Paste in a story and get its characters, theme, and a thoughtful summary.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="story-label">
+        <label id="story-label" for="story-input">Your story</label>
+        <textarea
+          id="story-input"
+          name="story"
+          placeholder="Once upon a time..."
+          rows="12"
+          required
+        ></textarea>
+        <div class="form-footer">
+          <p id="error-message" class="error" role="alert" hidden></p>
+          <button id="summarize-button" type="button">
+            <span class="button-label">Summarize story</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="result-section" class="result panel" aria-live="polite" hidden>
+        <div class="result-heading">
+          <div>
+            <h2>Summary</h2>
+          </div>
+        </div>
+        <div id="summary-output" class="summary-output"></div>
+      </section>
+
+      <footer>Thoughtful summaries, grounded in your story.</footer>
+    </main>
+  </body>
+</html>

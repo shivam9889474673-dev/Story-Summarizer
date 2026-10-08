@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+backend/prompt_store.db
+backend/story_summarizer.db
+backend/story_summarizer.corrupt-*.db
